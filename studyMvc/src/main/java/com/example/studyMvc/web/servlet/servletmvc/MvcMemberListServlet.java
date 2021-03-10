@@ -2,6 +2,7 @@ package com.example.studyMvc.web.servlet.servletmvc;
 
 import com.example.studyMvc.domain.member.Member;
 import com.example.studyMvc.domain.member.MemberRepository;
+import com.example.studyMvc.domain.member.MemberRepositoryImpl;
 import lombok.RequiredArgsConstructor;
 
 import javax.servlet.RequestDispatcher;

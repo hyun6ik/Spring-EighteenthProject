@@ -9,17 +9,23 @@ public class MemberRepositoryImpl {
 
     private static Map<Long, Member> store = new HashMap<>(); //static 사용
     private static long sequence = 0L; //static 사용
+
     private static final MemberRepositoryImpl instance = new MemberRepositoryImpl();
+
     public static MemberRepositoryImpl getInstance() {
         return instance;
     }
+
     private MemberRepositoryImpl() {
     }
+
+
     public Member save(Member member) {
         member.setId(++sequence);
         store.put(member.getId(), member);
         return member;
     }
+
     public Member findById(Long id) {
         return store.get(id);
     }
