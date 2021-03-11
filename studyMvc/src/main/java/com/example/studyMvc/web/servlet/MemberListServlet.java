@@ -14,10 +14,9 @@ import java.io.PrintWriter;
 import java.util.List;
 
 @WebServlet(name = "memberListServlet", urlPatterns = "/servlet/members")
-@RequiredArgsConstructor
 public class MemberListServlet extends HttpServlet {
 
-    private final MemberRepository memberRepository;
+    private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

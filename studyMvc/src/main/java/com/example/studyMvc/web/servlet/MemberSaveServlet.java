@@ -13,10 +13,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 @WebServlet(name = "memberSaveServlet", urlPatterns = "/servlet/members/save")
-@RequiredArgsConstructor
 public class MemberSaveServlet extends HttpServlet {
 
-    private final MemberRepository memberRepository;
+    private MemberRepository memberRepository = MemberRepository.getInstance();
 
     @Override
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,4 +1,3 @@
-<%@ page import="com.example.studyMvc.domain.member.MemberRepositoryImpl" %>
 <%@ page import="com.example.studyMvc.domain.member.MemberRepository" %>
 <%@ page import="com.example.studyMvc.domain.member.Member" %>
 <%@ page import="java.util.List" %><%--
@@ -10,7 +9,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
-    MemberRepositoryImpl memberRepository = MemberRepositoryImpl.getInstance();
+    MemberRepository memberRepository = MemberRepository.getInstance();
     List<Member> members = memberRepository.findAll();
 %>
 <html>
