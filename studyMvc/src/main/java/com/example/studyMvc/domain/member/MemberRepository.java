@@ -1,10 +1,13 @@
 package com.example.studyMvc.domain.member;
 
+import org.springframework.stereotype.Repository;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Repository
 public class MemberRepository {
 
     private static Map<Long, Member> store = new HashMap<>();
