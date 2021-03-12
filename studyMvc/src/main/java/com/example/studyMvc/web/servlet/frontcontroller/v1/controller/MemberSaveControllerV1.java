@@ -20,6 +20,8 @@ public class MemberSaveControllerV1 implements ControllerV1 {
 
     @Override
     public void process(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("MemberSaveControllerV1.process");
+
         String username = request.getParameter("username");
         int age = Integer.parseInt(request.getParameter("age"));
 
@@ -29,8 +31,8 @@ public class MemberSaveControllerV1 implements ControllerV1 {
         //Model에 데이터를 보관한다
         request.setAttribute("member",member);
 
-        String viewPath = "WEB-INF/views/new-form.jsp";
+        String viewPath = "/WEB-INF/views/save-result.jsp";
         RequestDispatcher dispatcher = request.getRequestDispatcher(viewPath);
-        dispatcher.forward(request,response);
+        dispatcher.forward(request, response);
     }
 }
